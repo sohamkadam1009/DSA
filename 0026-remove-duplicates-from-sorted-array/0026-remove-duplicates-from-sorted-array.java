@@ -3,7 +3,7 @@ class Solution {
         // int[] expectedNums = new int[];
         int slow = 0;
         int fast = 1;
-        int totalUnique = 1;
+        // int totalUnique = 1;
 
         while(fast<nums.length) {
             //if unique
@@ -11,10 +11,10 @@ class Solution {
                 nums[slow+1] = nums[fast];
                 slow++;
                 fast++;
-                totalUnique++;
+                // totalUnique++;
             } else fast++;
         }
 
-        return totalUnique;
+        return slow + 1;
     }
 }
