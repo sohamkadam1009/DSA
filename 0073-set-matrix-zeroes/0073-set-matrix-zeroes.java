@@ -6,6 +6,7 @@ class Solution {
 
         for(int i=0;i<n;i++) {
             for(int j=0;j<m;j++) {
+                //marking the arr[...][0] -> col[m] and arr[0][...] -> row[n]
                 if(arr[i][j] == 0) {
                     arr[i][0] = 0;
                     if(j != 0) arr[0][j] = 0;
@@ -14,8 +15,9 @@ class Solution {
             }
         }
 
-        for(int i=0;i<n;i++) {
-            for(int j=0;j<m;j++) {
+        for(int i=1;i<n;i++) {
+            for(int j=1;j<m;j++) {
+                //checking the 0's in the remaining matrix
                 if(arr[i][0] == 0 || arr[0][j] == 0) {
                     arr[i][j] = 0;
                 }
@@ -23,14 +25,14 @@ class Solution {
         }
 
         if(arr[0][0] == 0) {
-            for(int i=1;i<n;i++) {
-                arr[i][0] = 0;
+            for(int j=0;j<m;j++) {
+                arr[0][j] = 0;
             }
         }
 
         if(col0 == 0) {
-            for(int j=1;j<m;j++) {
-                arr[0][j] = 0;
+            for(int i=0;i<n;i++) {
+                arr[i][0] = 0;
             }
         }
     }
