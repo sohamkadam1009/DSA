@@ -2,9 +2,7 @@ class Solution {
     public void rotate(int[][] arr) {
         for(int i=0;i<arr.length;i++) {
             for(int j=i+1;j<arr[i].length;j++) {
-                    System.out.println(i +"  " + j);
-                    swap(arr,i,j);
-               
+                    swap(arr,i,j);  
             }
         }
 
