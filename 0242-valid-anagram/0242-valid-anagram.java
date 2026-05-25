@@ -7,6 +7,10 @@ class Solution {
 
     //calculating the freq of each character in string s
     HashMap <Character,Integer> frequency = new HashMap<>();
+    //if the length is not same return false
+
+    if(s.length() != t.length()) return false;
+
     for(Character ch : s.toCharArray()) {
         frequency.put(ch,frequency.getOrDefault(ch,0) + 1);
     }
